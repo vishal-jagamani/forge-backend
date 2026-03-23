@@ -1,4 +1,5 @@
 import process from 'node:process';
+import { runBasicPrompt, runPromptFlow } from './prompts';
 
 /**
  * CLI Entry Point
@@ -9,6 +10,15 @@ async function main() {
         console.log('========================================');
         console.log('🚀 create-backforge CLI starting...');
         console.log('========================================');
+
+        const result = await runBasicPrompt();
+        console.log('\n✅ Basic Prompt Result:');
+        console.log(result);
+
+        const projectConfig = await runPromptFlow();
+
+        console.log('\n📦 Final Config:');
+        console.log(projectConfig);
 
         // TODO: Integrate prompt system
         // TODO: Call generator
