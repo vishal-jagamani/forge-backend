@@ -11,7 +11,12 @@
         "skipLibCheck": true,
         "sourceMap": true,
         "allowJs": true,
-        "baseUrl": "src"
+        "baseUrl": "src",
+        "paths": {
+            "@prompts/*": ["prompts/*"],
+            "@app-types/*": ["types/*"],
+            "@utils/*": ["utils/*"]
+        }
     },
     "include": ["src"],
     "exclude": ["node_modules"]
