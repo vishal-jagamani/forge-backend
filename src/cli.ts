@@ -1,5 +1,8 @@
 import process from 'node:process';
 import { runBasicPrompt, runPromptFlow } from './prompts';
+import { generateProject } from 'generator';
+import { CliConfig } from '@app-types/cli-config';
+import chalk from 'chalk';
 
 /**
  * CLI Entry Point
@@ -20,12 +23,34 @@ async function main() {
         console.log('\n📦 Final Config:');
         console.log(projectConfig);
 
+        const targetDir = await generateProject(projectConfig);
+
+        showSuccessMessage(projectConfig, targetDir);
+
         // TODO: Integrate prompt system
         // TODO: Call generator
         // TODO: Handle user inputs
     } catch (error) {
         handleError(error);
     }
+}
+
+function showSuccessMessage(projectConfig: CliConfig, targetDir: string) {
+    console.log(chalk.green('🎉 Project created successfully!'));
+
+    console.log(`📁 Location: ${targetDir}\n`);
+
+    console.log('👉 Next steps:\n');
+
+    console.log(`  cd ${projectConfig.projectName}`);
+
+    if (!projectConfig.installDeps) {
+        console.log(`  ${projectConfig.packageManager} install`);
+    }
+
+    console.log(`  ${projectConfig.packageManager} run dev\n`);
+
+    console.log('✨ Happy coding!\n');
 }
 
 /**
