@@ -7,6 +7,16 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ## [Unreleased]
 
+### Added
+- Added a reusable project template structure under `template/` for generated backend apps.
+- Added a TypeScript functional backend starter template with Express, environment loading, health check routing, and a sample module.
+- Added starter project config files for generated apps, including `package.json`, `tsconfig.json`, ESLint, Prettier, `.gitignore`, and environment files.
+- Added placeholder template directories for future `ts/oop`, `js/functional`, and `js/oop` variants.
+
+### Changed
+- Expanded `backforge` from CLI-only setup toward scaffold generation by introducing reusable template assets.
+- Documented the template directory convention and placeholder usage in `template/README.md`.
+
 ## [1.0.0] - 2026-03-23
 
 ### Added

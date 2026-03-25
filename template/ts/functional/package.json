@@ -1,0 +1,32 @@
+{
+    "name": "{{projectName}}",
+    "version": "1.0.0",
+    "private": true,
+    "description": "{{projectName}} - Backend service generated using backforge",
+    "main": "dist/server.js",
+    "scripts": {
+        "dev": "tsx src/server.ts",
+        "build": "tsc",
+        "start": "node dist/server.js",
+        "lint": "eslint .",
+        "lint:fix": "eslint . --fix",
+        "format": "prettier --write ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.21",
+        "@types/node": "^20.0.0",
+        "eslint": "^10.0.3",
+        "@eslint/js": "^10.0.1",
+        "prettier": "^3.8.1",
+        "tsx": "^4.21.0",
+        "typescript": "^5.9.0",
+        "typescript-eslint": "^8.57.1"
+    }
+}
