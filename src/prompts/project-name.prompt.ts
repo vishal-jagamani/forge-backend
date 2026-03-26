@@ -1,3 +1,4 @@
+import { PROMPT_CONSTANTS } from '@constants/prompt.constants';
 import { input } from '@inquirer/prompts';
 import { formatProjectName, validateProjectName } from '@utils/project-name.utils';
 
@@ -6,8 +7,8 @@ import { formatProjectName, validateProjectName } from '@utils/project-name.util
  */
 export async function promptProjectName(defaultName?: string) {
     const projectName = await input({
-        message: 'Project name:',
-        default: defaultName || 'my-backend-app',
+        message: PROMPT_CONSTANTS.TEXT.PROJECT_NAME,
+        default: defaultName || PROMPT_CONSTANTS.TEXT.DEFAULT_PROJECT_NAME,
 
         validate: (value) => {
             return validateProjectName(value);

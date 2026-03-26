@@ -1,3 +1,4 @@
+import { GENERATOR_CONSTANTS } from '@constants/generator.constants';
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -10,18 +11,15 @@ export function replacePlaceholders(dir: string, replacements: Record<string, st
     for (const entry of entries) {
         const filePath = path.join(dir, entry.name);
 
-        const IGNORED_DIRS = ['node_modules', '.git', 'dist'];
-        const IGNORED_FILES = ['.DS_Store'];
-
         // Skip unwanted directories
         if (entry.isDirectory()) {
-            if (IGNORED_DIRS.includes(entry.name)) continue;
+            if (GENERATOR_CONSTANTS.IGNORED_DIRS.includes(entry.name as (typeof GENERATOR_CONSTANTS.IGNORED_DIRS)[number])) continue;
 
             replacePlaceholders(filePath, replacements);
             continue;
         }
 
-        if (IGNORED_FILES.includes(entry.name)) continue;
+        if (GENERATOR_CONSTANTS.IGNORED_FILES.includes(entry.name as (typeof GENERATOR_CONSTANTS.IGNORED_FILES)[number])) continue;
 
         if (!isTextFile(filePath)) continue;
 
@@ -55,7 +53,7 @@ export function replacePlaceholders(dir: string, replacements: Record<string, st
 function isTextFile(filePath: string) {
     const ext = path.extname(filePath).toLowerCase();
 
-    const allowed = new Set(['.ts', '.js', '.json', '.md', '.env', '.txt', '.yml', '.yaml', '.html', '.css']);
+    const allowed = new Set(GENERATOR_CONSTANTS.ALLOWED_EXTENSIONS);
 
-    return allowed.has(ext);
+    return allowed.has(ext as (typeof GENERATOR_CONSTANTS.ALLOWED_EXTENSIONS)[number]);
 }

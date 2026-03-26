@@ -1,4 +1,5 @@
 import { ProjectArchitecture, ProjectConfig, ProjectLanguage, ProjectPackageManager } from '@app-types/prompt.types';
+import { PROMPT_CONSTANTS } from '@constants/prompt.constants';
 import { select } from '@inquirer/prompts';
 
 /**
@@ -6,14 +7,14 @@ import { select } from '@inquirer/prompts';
  */
 export async function promptProjectConfig(): Promise<ProjectConfig> {
     const language = await select<ProjectLanguage>({
-        message: 'Select language:',
+        message: PROMPT_CONSTANTS.TEXT.SELECT_LANGUAGE,
         choices: [
             {
-                name: 'TypeScript',
+                name: PROMPT_CONSTANTS.LANGUAGE.TYPESCRIPT,
                 value: ProjectLanguage.TypeScript,
             },
             {
-                name: 'JavaScript',
+                name: PROMPT_CONSTANTS.LANGUAGE.JAVASCRIPT,
                 value: ProjectLanguage.JavaScript,
             },
         ],
@@ -21,19 +22,19 @@ export async function promptProjectConfig(): Promise<ProjectConfig> {
     });
 
     const architecture = await select<ProjectArchitecture>({
-        message: 'Select architecture style:',
+        message: PROMPT_CONSTANTS.TEXT.SELECT_ARCHITECTURE,
         choices: [
-            { name: 'Functional', value: ProjectArchitecture.FUNCTIONAL },
-            { name: 'OOP (Object-Oriented)', value: ProjectArchitecture.OOP },
+            { name: PROMPT_CONSTANTS.ARCHITECTURE.FUNCTIONAL, value: ProjectArchitecture.FUNCTIONAL },
+            { name: PROMPT_CONSTANTS.ARCHITECTURE.OOP, value: ProjectArchitecture.OOP },
         ],
         default: ProjectArchitecture.FUNCTIONAL,
     });
 
     const packageManager = await select<ProjectPackageManager>({
-        message: 'Select package manager:',
+        message: PROMPT_CONSTANTS.TEXT.SELECT_PACKAGE_MANAGER,
         choices: [
-            { name: 'pnpm (recommended)', value: ProjectPackageManager.PNPM },
-            { name: 'npm', value: ProjectPackageManager.NPM },
+            { name: PROMPT_CONSTANTS.PACKAGE_MANAGER.PNPM, value: ProjectPackageManager.PNPM },
+            { name: PROMPT_CONSTANTS.PACKAGE_MANAGER.NPM, value: ProjectPackageManager.NPM },
         ],
         default: ProjectPackageManager.PNPM,
     });
