@@ -15,7 +15,8 @@
         "paths": {
             "@prompts/*": ["prompts/*"],
             "@app-types/*": ["types/*"],
-            "@utils/*": ["utils/*"]
+            "@utils/*": ["utils/*"],
+            "@constants/*": ["constants/*"]
         }
     },
     "include": ["src"],
