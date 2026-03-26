@@ -1,4 +1,4 @@
-import { GENERATOR_CONSTANTS } from '@constants/generator.constants';
+import { GENERATOR_CONSTANTS } from '@constants/generator.constants.js';
 import fs from 'node:fs';
 import path from 'node:path';
 

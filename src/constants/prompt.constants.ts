@@ -4,17 +4,14 @@ export const PROMPT_CONSTANTS = {
         SELECT_ARCHITECTURE: 'Select architecture style:',
         SELECT_PACKAGE_MANAGER: 'Select package manager:',
         INSTALL_DEPENDENCIES: 'Install dependencies?',
-        INITIALIZE_GIT: 'Initialize git repository?',
         PROJECT_NAME: 'Project name:',
         DEFAULT_PROJECT_NAME: 'my-backend-app',
     },
     LANGUAGE: {
         TYPESCRIPT: 'TypeScript',
-        JAVASCRIPT: 'JavaScript',
     },
     ARCHITECTURE: {
         FUNCTIONAL: 'Functional',
-        OOP: 'OOP',
     },
     PACKAGE_MANAGER: {
         NPM: 'npm',

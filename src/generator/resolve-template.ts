@@ -1,6 +1,9 @@
-import { CliConfig } from '@app-types/cli-config';
+import { CliConfig } from '@app-types/cli-config.js';
 import fs from 'node:fs';
 import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 /**
  * Resolve template directory path
@@ -9,7 +12,7 @@ export function resolveTemplatePath(config: CliConfig) {
     const { language, architecture } = config;
 
     // Construct relative template path
-    const templatePath = path.resolve(process.cwd(), 'template', language, architecture);
+    const templatePath = path.resolve(__dirname, '../../template', language, architecture);
 
     // Validate existence
     if (!fs.existsSync(templatePath)) {

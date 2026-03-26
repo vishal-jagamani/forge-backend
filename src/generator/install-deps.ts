@@ -1,4 +1,4 @@
-import { ProjectPackageManager } from '@app-types/prompt.types';
+import { ProjectPackageManager } from '@app-types/prompt.types.js';
 import { spawn } from 'node:child_process';
 
 /**

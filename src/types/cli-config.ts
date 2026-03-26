@@ -9,5 +9,4 @@ export interface CliConfig {
     architecture: string;
     packageManager: string;
     installDeps: boolean;
-    gitInit: boolean;
 }

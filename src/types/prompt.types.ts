@@ -28,8 +28,4 @@ export interface ProjectSetupPreferences {
      * Whether to install dependencies
      */
     installDeps: boolean;
-    /**
-     * Whether to initialize git repository
-     */
-    gitInit: boolean;
 }
