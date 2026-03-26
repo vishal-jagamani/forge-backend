@@ -15,16 +15,22 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 - Added generator utilities to resolve templates, copy template files, and replace template placeholders during project creation.
 - Added a CLI success state with colored output and next-step guidance after project generation completes.
 - Added `chalk` for improved terminal output formatting.
+- Added dependency-installation support during project generation based on the selected package manager.
+- Added a generator helper to run `npm`, `pnpm`, or `yarn` install inside the generated project directory.
 
 ### Changed
 - Expanded `backforge` from CLI-only setup toward scaffold generation by introducing reusable template assets.
 - Documented the template directory convention and placeholder usage in `template/README.md`.
 - Updated the CLI flow to generate a project directory from the selected template after collecting prompt input.
 - Improved the post-generation UX by showing the project location and suggested follow-up commands.
+- Updated project generation to optionally install dependencies automatically after template copy and placeholder replacement.
+- Adjusted the success banner formatting to print a cleaner completion message in the CLI.
 
 ### Fixed
 - Prevented generation into an already existing target directory by failing early with a clear error.
 - Replaced template placeholders across copied text files so generated project files use the selected project name.
+- Added a graceful fallback when dependency installation fails so generation can still complete and the user gets manual next steps.
+- Simplified the existing-directory error message to reference the requested project name directly.
 
 ## [1.0.0] - 2026-03-23
 

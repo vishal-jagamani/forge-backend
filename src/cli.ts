@@ -36,7 +36,7 @@ async function main() {
 }
 
 function showSuccessMessage(projectConfig: CliConfig, targetDir: string) {
-    console.log(chalk.green('🎉 Project created successfully!'));
+    console.log('\n🎉 Project created successfully!\n');
 
     console.log(`📁 Location: ${targetDir}\n`);
 
