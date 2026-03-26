@@ -13,10 +13,6 @@ export async function promptProjectConfig(): Promise<ProjectConfig> {
                 name: PROMPT_CONSTANTS.LANGUAGE.TYPESCRIPT,
                 value: ProjectLanguage.TypeScript,
             },
-            {
-                name: PROMPT_CONSTANTS.LANGUAGE.JAVASCRIPT,
-                value: ProjectLanguage.JavaScript,
-            },
         ],
         default: ProjectLanguage.TypeScript,
     });
@@ -25,7 +21,6 @@ export async function promptProjectConfig(): Promise<ProjectConfig> {
         message: PROMPT_CONSTANTS.TEXT.SELECT_ARCHITECTURE,
         choices: [
             { name: PROMPT_CONSTANTS.ARCHITECTURE.FUNCTIONAL, value: ProjectArchitecture.FUNCTIONAL },
-            { name: PROMPT_CONSTANTS.ARCHITECTURE.OOP, value: ProjectArchitecture.OOP },
         ],
         default: ProjectArchitecture.FUNCTIONAL,
     });

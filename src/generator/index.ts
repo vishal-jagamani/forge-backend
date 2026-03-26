@@ -1,11 +1,11 @@
-import { CliConfig } from '@app-types/cli-config';
+import { CliConfig } from '@app-types/cli-config.js';
+import { ProjectPackageManager } from '@app-types/prompt.types.js';
 import fs from 'node:fs';
 import path from 'node:path';
-import { resolveTemplatePath } from './resolve-template';
-import { copyTemplate } from './copy-template';
-import { replacePlaceholders } from './replace-placeholders';
-import { installDependencies } from './install-deps';
-import { ProjectPackageManager } from '@app-types/prompt.types';
+import { copyTemplate } from './copy-template.js';
+import { installDependencies } from './install-deps.js';
+import { replacePlaceholders } from './replace-placeholders.js';
+import { resolveTemplatePath } from './resolve-template.js';
 
 /**
  * Main generator function

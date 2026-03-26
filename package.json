@@ -1,13 +1,15 @@
 {
   "name": "backforge",
   "version": "1.0.0",
+  "type": "module",
   "description": "CLI to scaffold backend projects with best practices",
   "main": "index.js",
   "bin": {
     "backforge": "./dist/cli.js"
   },
   "files": [
-    "dist"
+    "dist",
+    "template"
   ],
   "scripts": {
     "build": "tsup",
@@ -24,13 +26,13 @@
   "license": "MIT",
   "packageManager": "pnpm@10.14.0",
   "devDependencies": {
-    "eslint": "^10.0.3",
+    "eslint": "^10.1.0",
     "prettier": "^3.8.1",
     "tsc-alias": "^1.8.16",
     "tsup": "^8.5.1",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.57.1"
+    "typescript-eslint": "^8.57.2"
   },
   "dependencies": {
     "@inquirer/prompts": "^8.3.2",

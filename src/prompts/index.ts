@@ -5,7 +5,7 @@ export async function runBasicPrompt(): Promise<{ name: string }> {
     return { name };
 }
 
-export * from './project-name.prompt';
-export * from './config.prompt';
-export * from './preferences.prompt';
-export * from './prompt-flow';
+export * from './project-name.prompt.js';
+export * from './config.prompt.js';
+export * from './preferences.prompt.js';
+export * from './prompt-flow.js';

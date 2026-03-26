@@ -13,10 +13,11 @@
         "allowJs": true,
         "baseUrl": "src",
         "paths": {
+            "@constants/*": ["constants/*"],
+            "@generator/*": ["generator/*"],
             "@prompts/*": ["prompts/*"],
             "@app-types/*": ["types/*"],
             "@utils/*": ["utils/*"],
-            "@constants/*": ["constants/*"]
         }
     },
     "include": ["src"],

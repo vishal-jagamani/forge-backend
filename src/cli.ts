@@ -1,8 +1,8 @@
 import process from 'node:process';
-import { runBasicPrompt, runPromptFlow } from './prompts';
-import { generateProject } from 'generator';
-import { CliConfig } from '@app-types/cli-config';
+import { CliConfig } from '@app-types/cli-config.js';
 import chalk from 'chalk';
+import { runBasicPrompt, runPromptFlow } from '@prompts/index.js';
+import { generateProject } from '@generator/index.js';
 
 /**
  * CLI Entry Point
