@@ -1,5 +1,5 @@
-import { CliConfig } from '@app-types/cli-config';
-import { promptProjectConfig, promptProjectName, promptProjectSetupPreferences } from '@prompts/index';
+import { CliConfig } from '@app-types/cli-config.js';
+import { promptProjectConfig, promptProjectName, promptProjectSetupPreferences } from '@prompts/index.js';
 
 /**
  * Combined prompt flow

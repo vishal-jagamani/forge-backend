@@ -1,5 +1,5 @@
-import { ProjectArchitecture, ProjectConfig, ProjectLanguage, ProjectPackageManager } from '@app-types/prompt.types';
-import { PROMPT_CONSTANTS } from '@constants/prompt.constants';
+import { ProjectArchitecture, ProjectConfig, ProjectLanguage, ProjectPackageManager } from '@app-types/prompt.types.js';
+import { PROMPT_CONSTANTS } from '@constants/prompt.constants.js';
 import { select } from '@inquirer/prompts';
 
 /**

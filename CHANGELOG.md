@@ -7,6 +7,22 @@ and this project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.ht
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-03-27
+
+### Added
+- Added explicit `.js` import specifiers across prompt, type, and utility modules for better ESM compatibility in built output.
+
+### Changed
+- Renamed the published package from `backforge` to `forge-backend`.
+- Renamed the CLI executable command from `backforge` to `forge-backend`.
+- Removed the temporary basic input prompt from the main CLI startup flow so project setup starts directly with the actual scaffold prompts.
+- Updated prompt, type, and utility imports to use ESM-style `.js` paths consistently.
+- Adjusted template resolution internals to derive runtime paths from file URL metadata.
+
+### Fixed
+- Improved module resolution reliability for ESM builds by aligning internal imports with generated `.js` output paths.
+- Reduced startup noise by removing the extra debug/test prompt before the real scaffold flow.
+
 ## [1.0.0] - 2026-03-26
 
 ### Added

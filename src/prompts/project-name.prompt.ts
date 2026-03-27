@@ -1,6 +1,6 @@
-import { PROMPT_CONSTANTS } from '@constants/prompt.constants';
+import { PROMPT_CONSTANTS } from '@constants/prompt.constants.js';
 import { input } from '@inquirer/prompts';
-import { formatProjectName, validateProjectName } from '@utils/project-name.utils';
+import { formatProjectName, validateProjectName } from '@utils/project-name.utils.js';
 
 /**
  * Prompt user for project name

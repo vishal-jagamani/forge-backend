@@ -1,1 +1,1 @@
-export * from './project-name.utils';
+export * from './project-name.utils.js';

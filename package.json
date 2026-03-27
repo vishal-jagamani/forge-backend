@@ -1,11 +1,11 @@
 {
-  "name": "backforge",
-  "version": "1.0.0",
+  "name": "forge-backend",
+  "version": "1.0.1",
   "type": "module",
   "description": "CLI to scaffold backend projects with best practices",
   "main": "index.js",
   "bin": {
-    "backforge": "./dist/cli.js"
+    "forge-backend": "dist/cli.js"
   },
   "files": [
     "dist",
