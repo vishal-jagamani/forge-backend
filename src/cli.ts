@@ -14,10 +14,6 @@ async function main() {
         console.log('🚀 create-backforge CLI starting...');
         console.log('========================================');
 
-        const result = await runBasicPrompt();
-        console.log('\n✅ Basic Prompt Result:');
-        console.log(result);
-
         const projectConfig = await runPromptFlow();
 
         console.log('\n📦 Final Config:');

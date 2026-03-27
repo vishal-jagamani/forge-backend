@@ -1,4 +1,4 @@
-import { ProjectLanguage } from './prompt.types';
+import { ProjectLanguage } from './prompt.types.js';
 
 /**
  * CLI configuration interface

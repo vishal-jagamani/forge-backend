@@ -1,5 +1,5 @@
-import { ProjectSetupPreferences } from '@app-types/index';
-import { PROMPT_CONSTANTS } from '@constants/prompt.constants';
+import { ProjectSetupPreferences } from '@app-types/index.js';
+import { PROMPT_CONSTANTS } from '@constants/prompt.constants.js';
 import { confirm } from '@inquirer/prompts';
 
 /**
